@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SG Muslim Prayer Timetable from MUIS",
+        "description": "Configure the Collection ID from data.gov.sg. The default is 2312 (https://data.gov.sg/collections/2312/view).",
+        "data": {
+          "collection_id": "Collection ID"
+        }
+      }
+    }
+  }
+}

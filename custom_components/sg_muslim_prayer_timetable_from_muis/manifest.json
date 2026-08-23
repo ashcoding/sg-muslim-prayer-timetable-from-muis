@@ -1,0 +1,11 @@
+{
+  "domain": "sg_muslim_prayer_timetable_from_muis",
+  "name": "SG Muslim Prayer Timetable from MUIS",
+  "codeowners": ["@ashcoding"],
+  "config_flow": true,
+  "documentation": "https://github.com/ashcoding/sg-muslim-prayer-timetable-from-muis",
+  "issue_tracker": "https://github.com/ashcoding/sg-muslim-prayer-timetable-from-muis/issues",
+  "iot_class": "cloud_polling",
+  "version": "1.0.0.202608231225",
+  "requirements": []
+}
