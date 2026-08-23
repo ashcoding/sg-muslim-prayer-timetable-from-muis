@@ -3,6 +3,8 @@
 # Bismillahirrahmanirrahim
 *In the name of Allah, the Most Gracious, the Most Merciful*
 
+[![Python tests](https://github.com/ashcoding/sg-muslim-prayer-timetable-from-muis/actions/workflows/test.yml/badge.svg)](https://github.com/ashcoding/sg-muslim-prayer-timetable-from-muis/actions/workflows/test.yml)
+
 ---
 </div>
 
