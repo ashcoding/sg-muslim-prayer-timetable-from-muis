@@ -10,7 +10,7 @@
 
 # 🕋 SG Muslim Prayer Timetable from MUIS (Home Assistant Custom Integration)
 
-This directory contains **SG Muslim Prayer Timetable from MUIS**: a native Home Assistant custom integration that automates the tracking of accurate local prayer times in Singapore using open data.
+This directory contains **SG Muslim Prayer Timetable from MUIS**: a native Home Assistant custom integration that automates the tracking of accurate local prayer times in Singapore using open data from MUIS via https://data.gov.sg/.
 
 ---
 
