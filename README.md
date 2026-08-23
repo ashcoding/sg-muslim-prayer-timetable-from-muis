@@ -48,6 +48,72 @@ This directory contains **SG Muslim Prayer Timetable from MUIS**: a native Home 
 
 ---
 
+## 🤖 Example Automations
+
+Because this integration registers all prayer times as native Home Assistant **Timestamp Sensors**, you can easily use them as triggers in your automation rules.
+
+Here are three practical examples using modern YAML syntax:
+
+### 1. Play the Azan audio on a Media Player at Zohor
+This automation triggers when the Zohor timestamp is reached and plays a local Azan MP3 file on a smart speaker:
+
+```yaml
+alias: "Play Azan at Zohor"
+description: "Triggered by the MUIS Zohor sensor to play Azan audio on a media player"
+trigger:
+  - platform: time
+    sensor: sensor.sg_muis_zohor_prayer
+action:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.living_room_speaker
+    data:
+      media_content_id: "http://192.168.1.1:8123/local/audio/azan.mp3" # Replace with your local HA IP and audio URL
+      media_content_type: "music"
+```
+
+### 2. Turn on lights at Maghrib
+This automation triggers at the exact time of Maghrib to turn on light switches:
+
+```yaml
+alias: "Turn on Living Room Lights at Maghrib"
+description: "Automatically turns on living room lights when Maghrib prayer starts"
+trigger:
+  - platform: time
+    sensor: sensor.sg_muis_maghrib_prayer
+action:
+  - action: light.turn_on
+    target:
+      entity_id: light.living_room_lights
+    data:
+      brightness_pct: 80
+```
+
+### 3. Combination: Play Azan and Turn on Lights at Subuh
+This automation triggers at Subuh, playing the Azan audio on your smart speaker AND turning on the bedroom lights to a soft brightness:
+
+```yaml
+alias: "Subuh Wake Up Routine"
+description: "Plays Azan and turns on lights at Subuh time"
+trigger:
+  - platform: time
+    sensor: sensor.sg_muis_subuh_prayer
+action:
+  - action: media_player.play_media
+    target:
+      entity_id: media_player.living_room_speaker
+    data:
+      media_content_id: "http://192.168.1.1:8123/local/audio/azan.mp3" # Replace with your local HA IP and audio URL
+      media_content_type: "music"
+  - action: light.turn_on
+    target:
+      entity_id: light.bedroom_lights
+    data:
+      brightness_pct: 30
+```
+
+---
+
 ## 🛠️ Development & Testing Workflow
 
 If you want to edit and develop the integration locally on your PC and push it to your Home Assistant server:
