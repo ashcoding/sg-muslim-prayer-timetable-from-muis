@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.0.202608231225] - 2026-08-23
+## [1.0.0.202608252030] - 2026-08-25
 ### Added
 - Initial release of **SG Muslim Prayer Timetable from MUIS** custom integration.
 - Year-grouped offline local caching (`muslim_prayers_{year}.json`).
